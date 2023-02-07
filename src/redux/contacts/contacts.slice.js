@@ -1,9 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit';
+// import { logOut, logIn } from 'redux/user/operations';
 import {
   fetchContacts,
   addContact,
   deleteContact,
-} from './contacts/contactsOperations';
+  patchContact,
+} from './contactsOperations';
 
 const handlePending = state => {
   state.isLoading = true;
@@ -48,6 +50,31 @@ const contactsSlice = createSlice({
         contact => contact.id === action.payload.id
       );
       state.items.splice(index, 1);
+    },
+    // [logOut.fulfilled](state) {
+    //   state.items = [];
+    //   state.error = null;
+    //   state.isLoading = false;
+    // },
+    // [logIn.fulfilled](state) {
+    //   state.items = [];
+    //   state.error = null;
+    //   state.isLoading = false;
+    // },
+    [patchContact.pending](state) {
+      state.isLoading = true;
+    },
+    [patchContact.fulfilled](state, action) {
+      state.isLoading = false;
+      state.error = null;
+      const index = state.items.findIndex(
+        contact => contact.id === action.payload.id
+      );
+      state.items.splice(index, 1, action.payload);
+    },
+    [patchContact.rejected](state, action) {
+      state.isLoading = false;
+      state.error = action.payload;
     },
   },
 });

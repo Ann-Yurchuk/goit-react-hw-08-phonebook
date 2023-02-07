@@ -1,11 +1,53 @@
 import styled from '@emotion/styled';
 
-export const InputPhone = styled.input`
+export const Form = styled.form`
+  width: 100%;
+  padding: 2em;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #b12816;
+  box-shadow: 0px 7px 16px -3px rgba(0, 0, 0, 0.5);
+  background-color: #bc3220;
+  background-color: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, #bc3220),
+    color-stop(29%, #db4a37),
+    color-stop(50%, #db4a37),
+    color-stop(71%, #db4a37),
+    color-stop(100%, #bc3220)
+  );
+  background-color: -webkit-linear-gradient(
+    left,
+    #bc3220 0%,
+    #db4a37 29%,
+    #db4a37 50%,
+    #db4a37 71%,
+    #bc3220 100%
+  );
+  background-color: linear-gradient(
+    to right,
+    #bc3220 0%,
+    #db4a37 29%,
+    #db4a37 50%,
+    #db4a37 71%,
+    #bc3220 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bc3220', endColorstr='#bc3220', GradientType=1 );
+`;
+
+export const Label = styled.label`
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-family: Open Sans, Arial, sans-serif;
+  text-shadow: 1px 1px 1px #232323;
+`;
+
+export const Input = styled.input`
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
   padding: 1em 2em;
-  margin-bottom: 10px;
   border: 1px solid grey;
   width: 100%;
   box-sizing: border-box;
