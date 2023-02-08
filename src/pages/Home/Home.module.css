@@ -16,9 +16,10 @@
   margin-bottom: 20px;
   font-weight: 500;
   font-size: 35px;
-background: linear-gradient(to right, #520b0b, #46041b, #09941c, #cbfc45) 47% 0%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  background: linear-gradient(to right, #520b0b, #46041b, #09941c, #cbfc45) 47%
+    0%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .text {
@@ -29,9 +30,11 @@ background: linear-gradient(to right, #520b0b, #46041b, #09941c, #cbfc45) 47% 0%
     0%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  padding: 20px;
 }
 
 .info {
   font-size: 20px;
   color: var(--secondaryTextColor);
+  padding: 20px;
 }
