@@ -45,7 +45,7 @@ export default function Home() {
             variants={variants}
           >
             Please, <b>Register</b> or <b>Log In</b> to have access to the
-            Phonebook!
+            PhoneBook!
           </motion.p>
         </AnimatePresence>
       )}

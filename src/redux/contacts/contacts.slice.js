@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-// import { logOut, logIn } from 'redux/user/operations';
 import {
   fetchContacts,
   addContact,
@@ -51,16 +50,6 @@ const contactsSlice = createSlice({
       );
       state.items.splice(index, 1);
     },
-    // [logOut.fulfilled](state) {
-    //   state.items = [];
-    //   state.error = null;
-    //   state.isLoading = false;
-    // },
-    // [logIn.fulfilled](state) {
-    //   state.items = [];
-    //   state.error = null;
-    //   state.isLoading = false;
-    // },
     [patchContact.pending](state) {
       state.isLoading = true;
     },

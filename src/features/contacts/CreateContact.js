@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { nanoid } from 'nanoid';
 import { useDispatch, useSelector } from 'react-redux';
 import { InputPhone, Button } from './Contacts.styled';
 import { contactsOperations, contactsSelectors } from 'redux/contacts';
@@ -23,7 +22,6 @@ export const CreateContact = () => {
       return;
     }
     const newContact = {
-      id: nanoid(),
       name: newUserName,
       number: number,
     };

@@ -54,7 +54,7 @@ export const Button = styled.button`
   border: 0;
   border-radius: 30px;
   color: #fff;
-  margin-top: 50px;
+  margin-top: 20px;
   cursor: pointer;
   font-size: 0.85em;
   font-weight: 500;
@@ -68,5 +68,16 @@ export const Button = styled.button`
     transition: transform 0.15s ease, -webkit-transform 0.15s ease;
     -webkit-transform: scale(1.02);
     transform: scale(1.02);
+  }
+`;
+
+export const Item = styled.li`
+  list-style-type: none;
+  padding: 20px;
+  &::before {
+    content: '-';
+    font-size: 20px;
+    font-weight: bold;
+    color: #f00;
   }
 `;
